@@ -77,7 +77,7 @@ function Login() {
             </Link>
           </p>
         </div>
-        <div className="mt-12" data-aos="fade-up">
+        <div className="mt-12" >
           <QuickLinks />
         </div>
       </div>
