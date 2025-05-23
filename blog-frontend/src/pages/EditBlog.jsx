@@ -3,6 +3,7 @@ import { fetchBlog, updateBlog } from '../api/blogApi';
 import BlogForm from '../components/BlogForm';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import QuickLinks from './QuickLink';
 
 export default function EditBlog() {
   const { id } = useParams();
@@ -36,6 +37,7 @@ export default function EditBlog() {
             <p className="text-center">Loading...</p>
           )}
         </div>
+        <QuickLinks/>
       </div>
     </div>
   );

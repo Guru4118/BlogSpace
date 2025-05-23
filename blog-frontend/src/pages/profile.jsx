@@ -118,7 +118,7 @@ export default function Profile() {
                 <div className="mt-2 flex space-x-3">
                   <button
                     onClick={() => handleEdit(blog._id)}
-                    className="px-4 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+                    className="px-4 py-1 bg-pink-500 text-white rounded hover:bg-blue-600 transition"
                   >
                     Edit
                   </button>
