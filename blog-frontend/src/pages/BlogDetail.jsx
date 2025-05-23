@@ -33,7 +33,7 @@ export default function BlogDetail() {
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-pink-500 via-white to-pink-200 backdrop-blur-2xl z-0"></div>
 
       {/* Content Layer */}
-      <div className="relative z-10 px-4 pt-15 max-w-7xl mx-auto">
+      <div className="relative z-10 px-4 pt-10 max-w-7xl mx-auto">
         <Navbar />
         <div className="mt-8 p-6 bg-white bg-opacity-90 rounded-xl shadow-lg">
           <h1 className="text-3xl font-bold text-pink-700 mb-1">{blog.title}</h1>
