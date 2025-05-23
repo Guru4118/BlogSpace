@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../components/Navbar";
+import QuickLinks from './QuickLink';
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -75,6 +76,9 @@ function Login() {
               Register here
             </Link>
           </p>
+        </div>
+        <div className="mt-12" data-aos="fade-up">
+          <QuickLinks />
         </div>
       </div>
     </div>
