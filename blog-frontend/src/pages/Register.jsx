@@ -3,6 +3,8 @@ import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import Login from"./Login";
 import Navbar from "../components/Navbar";
+import QuickLinks from './QuickLink';
+
 
 function Register() {
   const [username, setUsername] = useState("");
@@ -94,6 +96,9 @@ function Register() {
           </Link>
         </p>
       </div>
+      <div className="mt-12" >
+          <QuickLinks />
+        </div>
     </div>
     </div>
   );
