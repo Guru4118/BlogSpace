@@ -18,7 +18,7 @@ function Register() {
     setSuccess("");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", {
+      const response = await axios.post("https://blogspace-b5td.onrender.com/api/auth/register", {
         username,
         email,
         password,

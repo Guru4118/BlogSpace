@@ -23,10 +23,10 @@ export default function Profile() {
           headers: { Authorization: `Bearer ${token}` },
         };
 
-        const userRes = await axios.get('http://localhost:5000/api/auth/me', config);
+        const userRes = await axios.get('https://blogspace-b5td.onrender.com/api/auth/me', config);
         setUser(userRes.data);
 
-        const blogRes = await axios.get(`http://localhost:5000/api/blogs?author=${userRes.data._id}`, config);
+        const blogRes = await axios.get(`https://blogspace-b5td.onrender.com/api/blogs?author=${userRes.data._id}`, config);
         setBlogs(blogRes.data);
       } catch (err) {
         console.error(err);
@@ -41,7 +41,7 @@ export default function Profile() {
       const config = {
         headers: { Authorization: `Bearer ${token}` },
       };
-      const res = await axios.get(`http://localhost:5000/api/blogs?author=${userId}`, config);
+      const res = await axios.get(`https://blogspace-b5td.onrender.com/api/blogs?author=${userId}`, config);
       setBlogs(res.data);
     } catch (err) {
       console.error(err);
@@ -66,7 +66,7 @@ export default function Profile() {
     if (!confirm || !user) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/blogs/${id}`, {
+      await axios.delete(`https://blogspace-b5td.onrender.com/api/blogs/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       await fetchUserBlogs(user._id);
