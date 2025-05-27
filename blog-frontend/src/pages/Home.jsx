@@ -8,19 +8,33 @@ import 'aos/dist/aos.css';
 
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true); // new loading state
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
-    fetchBlogs().then(res => setBlogs(res.data)).catch(console.error);
+    fetchBlogs()
+      .then(res => setBlogs(res.data))
+      .catch(console.error)
+      .finally(() => setLoading(false)); // stop loading when done
   }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex justify-center items-center bg-pink-100">
+        <div className="text-rose-600 text-xl font-semibold animate-pulse">
+          Loading blogs...
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen w-full relative overflow-x-hidden">
 
-      {/* 🌸 Gradient Blurred Background */}
+     
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-pink-500 via-white to-pink-200 backdrop-blur-2xl z-0"></div>
 
-      {/* 🌐 Content Container */}
+     
       <div className="relative z-10 px-4 pt-10 max-w-7xl mx-auto">
         <Navbar />
         <br/>
@@ -28,7 +42,7 @@ export default function Home() {
           Featured Blogs
         </h1>
 
-        {/* 🔲 Responsive Grid Layout */}
+      
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogs.map((blog, index) => (
             <div
