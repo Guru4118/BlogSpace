@@ -37,7 +37,7 @@ function QuickLinks() {
       
 
     </div>
-    <div className="p-4 mt-8 rounded-2xl text-xs justify-center text-center bg-gradient-to-br from-pink-300 to-pink-400 ">
+    <div className="p-2 mt-8 rounded-2xl text-xs justify-center text-center bg-gradient-to-br from-pink-300 to-pink-400 ">
             <p>Copyright © <span className="text-white text-2xl">BlogSpace</span>. All Rights Reserved. Designed by <span className="text-white text-2xl"><a href="https://www.linkedin.com/in/guruprasath103/" target="new">Guruprasath</a> </span></p>
         </div>
         </>
