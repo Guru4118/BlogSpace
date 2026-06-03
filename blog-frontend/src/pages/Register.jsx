@@ -51,7 +51,7 @@ function Register() {
     setError(""); setSuccess("");
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", { username, email, password });
+      const response = await axios.post("https://blogspace-b5td.onrender.com/api/auth/register", { username, email, password });
       setSuccess(response.data.message || "Account created successfully!");
       setTimeout(() => navigate("/"), 2000);
     } catch (err) {

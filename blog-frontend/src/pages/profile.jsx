@@ -17,9 +17,9 @@ export default function Profile() {
     const config = { headers: { Authorization: `Bearer ${token}` } };
     const load = async () => {
       try {
-        const ur = await axios.get('http://localhost:5000/api/auth/me', config);
+        const ur = await axios.get('https://blogspace-b5td.onrender.com/api/auth/me', config);
         setUser(ur.data);
-        const br = await axios.get(`http://localhost:5000/api/blogs?author=${ur.data._id}`, config);
+        const br = await axios.get(`https://blogspace-b5td.onrender.com/api/blogs?author=${ur.data._id}`, config);
         setBlogs(br.data);
       } catch (err) { console.error(err); }
     };
@@ -30,7 +30,7 @@ export default function Profile() {
   const handleDelete = async (id) => {
     if (!window.confirm('Delete this post?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/blogs/${id}`, { headers: { Authorization: `Bearer ${token}` } });
+      await axios.delete(`https://blogspace-b5td.onrender.com/api/blogs/${id}`, { headers: { Authorization: `Bearer ${token}` } });
       setBlogs(prev => prev.filter(b => b._id !== id));
     } catch (err) { console.error(err); }
   };

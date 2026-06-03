@@ -17,7 +17,7 @@ export default function CommentForm({ blogId, onCommentPosted }) {
     setLoading(true); setError('');
     try {
       await axios.post(
-        `http://localhost:5000/api/comments/${blogId}`,
+        `https://blogspace-b5td.onrender.com/api/comments/${blogId}`,
         { text },
         { headers: { Authorization: `Bearer ${token}` } }
       );
