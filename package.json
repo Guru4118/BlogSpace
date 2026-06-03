@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.7",
+    "aos": "^2.3.4",
+    "react-lazyload": "^3.2.1",
+    "react-router-dom": "^7.6.0",
+    "tailwindcss": "^4.1.7"
+  }
+}
