@@ -7,7 +7,7 @@ export default function CommentList({ blogId }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/comments/${blogId}`)
+    axios.get(`https://blogspace-b5td.onrender.com/api/comments/${blogId}`)
       .then(res => setComments(res.data))
       .catch(console.error)
       .finally(() => setLoading(false));
